@@ -1,0 +1,5 @@
+﻿D:\Visual Studio 2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  EDDX52.cpp
+c:\users\wulka\source\repos\eddx52\eddx52\eddx52.cpp(171): warning C4244: 'initializing': conversion from 'DWORD' to 'OLECHAR', possible loss of data
+c:\users\wulka\source\repos\eddx52\eddx52\eddx52.cpp(171): warning C4244: 'initializing': conversion from 'DWORD' to 'const OLECHAR', possible loss of data
+  EDDX52.vcxproj -> C:\Users\wulka\source\repos\EDDX52\EDDX52\..\..\..\..\AppData\Local\EDDiscovery\DLL\EDDX52.dll
