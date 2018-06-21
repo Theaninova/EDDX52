@@ -1,6 +1,9 @@
 # EDDX52
 Direct Output Extension for EDDiscovery
 
+IF you are interested in video updates, also consider subscribing to my YouTube channel. A playlist of video demos of the plugin can be found here:
+https://www.youtube.com/watch?v=X7Aa_dmgoHg&list=PLx_w0I1Dt0F18xxf1sGLsxxo1jC_-v9dm
+
 This is a plugin for EDDiscovery. It is written in C++ and relies on the DirectOutput.dll by Saitek. Purpose of the plugin is giving you the ability to extend the functionality of EDD with your X52 Pro Joystick through the Action language.
 
 Current features include:
