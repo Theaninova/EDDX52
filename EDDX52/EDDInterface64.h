@@ -69,7 +69,7 @@ extern "C"
 
 	//EDD_API void EDDRefresh(BSTR cmdr, JournalEntry last_je);			// optional, last_je is the last one received. last_je.indexno =-1 if no history is present.
 	//EDD_API void EDDNewJournalEntry(JournalEntry nje);		// optional. nje will always be set.  Called when a new Journal Entry received
-	//EDD_API void __cdecl EDDTerminate();					// optional
+	EDD_API void __cdecl EDDTerminate();					// optional
 	EDD_API BSTR __cdecl EDDActionCommand(BSTR action, SAFEARRAY& args);		// optional. Called by Action DLLCall. Always return string. Args could be an empty array.
 	//EDD_API void EDDActionJournalEntry(JournalEntry je);		// optional. Called by Action DLLCall to feed a journal entry to you.
 }
