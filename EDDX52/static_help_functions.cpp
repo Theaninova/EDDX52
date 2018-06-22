@@ -51,6 +51,40 @@ void wrapWcharP(const wchar_t * &str, wchar_t(&out)[3][16]) {
 	out[2][15] = '.';
 }
 
+void performMfdTransition(DirectOutput_SetString &setString, std::vector<mfd_entry> mfd_text, int mfd_line, long transitionDurationMS, void * activeDevice, DWORD workPage) {
+	wchar_t newContent[3][16] = {
+		L"               ",
+		L"               ",
+		L"               "
+	};
+
+	wchar_t * name;
+	size_t length = mfd_text.size();
+	for (int i = mfd_line; i < length; i++) {
+		name = mfd_text[i].name.GetBSTR();
+		for (int z = 0; z < 16; i++) {
+			if (z < length)
+				newContent[length - i][z] = name[z];
+		}
+	}
+
+	performMfdTransition(setString, newContent, transitionDurationMS, activeDevice, workPage);
+}
+
+void performMfdTransition(DirectOutput_SetString &setString, wchar_t(&newContent)[3][16], long transitionDurationMS, void * activeDevice, DWORD workPage) {
+	auto pause = std::chrono::milliseconds(transitionDurationMS / 6);
+
+	for (int i = 2; i >= 3; i--) {
+		setString(activeDevice, workPage, i, 1, L" ");
+		std::this_thread::sleep_for(pause);
+	}
+
+	for (int i = 0; i < 3; i++) {
+		setString(activeDevice, workPage, i, wcslen(newContent[i]), newContent[i]);
+		std::this_thread::sleep_for(pause);
+	}
+}
+
 void WriteASCII(const std::string str)		// ASCII file..
 {
 	std::fstream fstream("c:\\code\\eddif.txt", std::ios::app);         // open the file
