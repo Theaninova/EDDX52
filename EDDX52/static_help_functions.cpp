@@ -87,7 +87,7 @@ void performMfdEnterAnimation(DirectOutput_SetString &setString, wchar_t (&out)[
 		for (int i = 0; i < length[z]; i++) {
 			std::this_thread::sleep_for(50ms);
 			display[z][i] = out[z][i];
-			display[z][i + 1] = '<';
+			display[z][i + 1] = '_';
 			setString(activeDevice, workPage, z, 16, display[z]);
 		}
 		display[z][length[z]] = out[z][length[z]];
