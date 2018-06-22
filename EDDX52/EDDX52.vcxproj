@@ -157,6 +157,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="EDDX52.h" />
     <ClInclude Include="EDDX52_DirectOutput.h" />
     <ClInclude Include="EDDInterface64.h" />
     <ClInclude Include="static_help_functions.h" />

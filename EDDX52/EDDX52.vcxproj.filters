@@ -30,6 +30,9 @@
     <ClInclude Include="EDDX52_DirectOutput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="EDDX52.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

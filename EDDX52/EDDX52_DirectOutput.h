@@ -2,12 +2,16 @@
 #include "stdafx.h"
 
 extern "C" {
+	const _bstr_t libDependencies = "\\DirectOutput.dll";
+
 	typedef void __stdcall Pfn_DirectOutput_Device_Callback(void* hDevice, bool bAdded, void* pvContext);
 	typedef void __stdcall Pfn_DirectOutput_EnumerateCallback(void* hDevice, void* pvContext);
 	typedef void __stdcall Pfn_DirectOutput_SoftButton_Callback(void* hDevice, DWORD dwButtons, void* pvContext);
 	typedef void __stdcall Pfn_DirectOutput_Page_Callback(void* hDevice, DWORD dwPage, bool bActivated, void* pvContext);
 
 	const DWORD FLAG_SET_AS_ACTIVE = 0x00000001;
+
+	const int mfdLinesCount = 3;
 
 	const DWORD SoftButton_Select = 0x00000001; // X52Pro ScrollClick
 	const DWORD SoftButton_Up = 0x00000002; // X52Pro ScrollUp, FIP RightScrollClockwize
