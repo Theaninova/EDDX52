@@ -82,20 +82,16 @@ void performMfdEnterAnimation(DirectOutput_SetString &setString, wchar_t (&out)[
 {
 	using namespace std::chrono_literals;
 
-	//wchar_t line1[16] = L"_              ";
-	//int length1 = determineStringLength(out[0]);
-	//wchar_t line2[16] = L"_              ";
-	//int length2 = determineStringLength(out[1]);
-	//wchar_t line3[16] = L"_              ";
-	//int length3 = determineStringLength(out[2]);
-
 	for (int z = 0; z < 3; z++) {
-		setString(activeDevice, workPage, 0, 16, display[z]);
+		setString(activeDevice, workPage, z, 16, display[z]);
 		for (int i = 0; i < length[z]; i++) {
 			std::this_thread::sleep_for(50ms);
 			display[z][i] = out[z][i];
-			display[z][i + 1] = '_';
+			display[z][i + 1] = '<';
 			setString(activeDevice, workPage, z, 16, display[z]);
 		}
+		display[z][length[z]] = out[z][length[z]];
+		std::this_thread::sleep_for(50ms);
+		setString(activeDevice, workPage, z, 16, display[z]);
 	}
 }
