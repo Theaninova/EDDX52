@@ -5,17 +5,6 @@
 const std::string version = "1.0";
 const _bstr_t bsVersion = L"1.0";
 const _bstr_t name = L"EDDX52";
-//Direct Output functions
-HINSTANCE directOutputDll;
-DirectOutput_AddPage addPage;
-DirectOutput_RegisterSoftButtonCallback registerSoftButtonCallback;
-DirectOutput_RegisterPageCallback registerPageCallback;
-DirectOutput_SetLed setLed;
-DirectOutput_SetString setString;
-DirectOutput_RemovePage removePage;
-DirectOutput_Deinitialize deInitDO;
-//EDD Callbacks
-EDDCallBacks callbacks;
 //Command names
 const _bstr_t setLEDCommand = L"setLED";
 const _bstr_t setLEDAdvancedCommand = L"advSetLED";
@@ -71,4 +60,27 @@ const LedState simpleLedStates[simpleLedStatesCount]{
 { L"RED", 1, 0 },
 { L"GREEN", 0, 1 },
 { L"YELLOW", 1, 1 }
+};
+//MFD Entry with callback support
+struct mfd_entry {
+	_bstr_t name;
+	_bstr_t callbackName;
+};
+//Flash Patterns
+struct timestamp {
+	DWORD turnOn;
+	double time;
+};
+struct flashPattern {
+	bool enabled;
+
+	int repeat;
+	double repeatOffset;
+	double flashDuration;
+	double flashOffset;
+
+	double * progress;
+
+	std::vector<timestamp> schedule;
+	bool needsSchedule;
 };

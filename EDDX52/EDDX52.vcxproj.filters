@@ -30,7 +30,7 @@
     <ClInclude Include="EDDX52_DirectOutput.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EDDX52.h">
+    <ClInclude Include="EDDX52_constVal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
