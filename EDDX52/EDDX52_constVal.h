@@ -2,39 +2,39 @@
 #include "stdafx.h"
 
 //Version stuff
-const std::string version = "1.0";
-const _bstr_t bsVersion = L"1.0";
-const _bstr_t name = L"EDDX52";
+const static std::string version = "1.0";
+const static wchar_t * bsVersion = L"1.0";
+const static _bstr_t name = L"EDDX52";
 //Command names
-const _bstr_t setLEDCommand = L"setLED";
-const _bstr_t setLEDAdvancedCommand = L"advSetLED";
-const _bstr_t setStringCommand = L"setString";
-const _bstr_t getLinesCountCommand = L"getLinesCount";
-const _bstr_t resetMFDCommand = L"resetMFD";
-const _bstr_t setLineCommand = L"setLine";
-const _bstr_t resetLedCommand = L"resetLED";
-const _bstr_t resetCommand = L"reset";
-const _bstr_t turnAllLedOffCommand = L"turnAllLEDOff";
-const _bstr_t syncAllFlashPtrnCommand = L"syncFlashPatterns";
-const _bstr_t permaSyncToCommand = L"permaSyncTo";
-const _bstr_t desyncCommand = L"desync";
-const _bstr_t peakMfdCommand = L"peakMFD";
+const static _bstr_t setLEDCommand = L"setLED";
+const static _bstr_t setLEDAdvancedCommand = L"advSetLED";
+const static _bstr_t setStringCommand = L"setString";
+const static _bstr_t getLinesCountCommand = L"getLinesCount";
+const static _bstr_t resetMFDCommand = L"resetMFD";
+const static _bstr_t setLineCommand = L"setLine";
+const static _bstr_t resetLedCommand = L"resetLED";
+const static _bstr_t resetCommand = L"reset";
+const static _bstr_t turnAllLedOffCommand = L"turnAllLEDOff";
+const static _bstr_t syncAllFlashPtrnCommand = L"syncFlashPatterns";
+const static _bstr_t permaSyncToCommand = L"permaSyncTo";
+const static _bstr_t desyncCommand = L"desync";
+const static _bstr_t peakMfdCommand = L"peakMFD";
 //Error and return codes
-const _bstr_t errorTooFewParam = L"!TOO_FEW_PARAM";
-const _bstr_t errorInvalidAct = L"!INVALID_ACTION ";
-const _bstr_t errorLedNotFound = L"!LED_NOT_FOUND";
-const _bstr_t errorStateNotFound = L"!LED_STATE_NOT_FOUND";
-const _bstr_t success = L"SUCCESS";
+const static _bstr_t errorTooFewParam = L"!TOO_FEW_PARAM";
+const static _bstr_t errorInvalidAct = L"!INVALID_ACTION ";
+const static _bstr_t errorLedNotFound = L"!LED_NOT_FOUND";
+const static _bstr_t errorStateNotFound = L"!LED_STATE_NOT_FOUND";
+const static _bstr_t success = L"SUCCESS";
 
 //Stuff for Simplified LED control
-const int ledCount = 20;
-const int simpleLedCount = 11;
+const static int ledCount = 20;
+const static int simpleLedCount = 11;
 struct ButtonLed {
 	_bstr_t name;
 	DWORD redCompName;
 	DWORD greenCompName;
 };
-const ButtonLed simpleLeds[simpleLedCount] = {
+const static ButtonLed simpleLeds[simpleLedCount] = {
 	{ L"FIRE", 0, 0 },
 { L"FIRE_A", 1, 2 },
 { L"FIRE_B", 3, 4 },
@@ -48,13 +48,13 @@ const ButtonLed simpleLeds[simpleLedCount] = {
 { L"THROTTLE", 19, 19 }
 };
 //Still simplified LED stuff
-const int simpleLedStatesCount = 5;
+const static int simpleLedStatesCount = 5;
 struct LedState {
 	_bstr_t name;
 	DWORD stateRed;
 	DWORD stateGreen;
 };
-const LedState simpleLedStates[simpleLedStatesCount]{
+const static LedState simpleLedStates[simpleLedStatesCount]{
 	{ L"ON", 1, 1 },
 { L"OFF", 0, 0 },
 { L"RED", 1, 0 },
