@@ -73,11 +73,11 @@ void performMfdTransition(DirectOutput_SetString &setString, std::vector<mfd_ent
 	performMfdTransition(setString, newContent, transitionDurationMS, activeDevice, workPage);
 }
 
-void performMfdTransition(DirectOutput_SetString &setString, wchar_t(&newContent)[3][16], long transitionDurationMS, void * activeDevice, DWORD workPage) {
+void performMfdTransition(DirectOutput_SetString &setString, wchar_t (&newContent)[3][16], long transitionDurationMS, void * activeDevice, DWORD workPage) {
 	auto pause = std::chrono::milliseconds(transitionDurationMS / 6);
 
-	for (int i = 2; i >= 3; i--) {
-		setString(activeDevice, workPage, i, 1, L" ");
+	for (int i = 2; i >= 0; i--) {
+		setString(activeDevice, workPage, i, 16, L"                ");
 		std::this_thread::sleep_for(pause);
 	}
 

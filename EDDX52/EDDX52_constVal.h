@@ -1,7 +1,7 @@
 #pragma once
 #include "stdafx.h"
 
-const static long stdTransitionDuration = 1200;
+const static long stdTransitionDuration = 600;
 //Version stuff
 const static std::string version = "1.0";
 const static wchar_t * bsVersion = L"1.0";
