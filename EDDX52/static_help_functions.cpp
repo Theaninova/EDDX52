@@ -51,7 +51,7 @@ void wrapWcharP(const wchar_t * &str, wchar_t(&out)[3][16]) {
 	out[2][15] = '.';
 }
 
-void performMfdTransition(DirectOutput_SetString &setString, std::vector<mfd_entry> mfd_text, int mfd_line, long transitionDurationMS, void * activeDevice, DWORD workPage) {
+void performMfdTransition(DirectOutput_SetString &setString, std::vector<mfd_entry> mfd_text, int mfd_line /* DON'T MAKE IT A REFERENCE*/, long transitionDurationMS, void * activeDevice, DWORD workPage) {
 	wchar_t newContent[3][16] = {
 		L"               ",
 		L"               ",
@@ -60,11 +60,13 @@ void performMfdTransition(DirectOutput_SetString &setString, std::vector<mfd_ent
 
 	wchar_t * name;
 	size_t length = mfd_text.size();
-	for (int i = mfd_line; i < length; i++) {
-		name = mfd_text[i].name.GetBSTR();
-		for (int z = 0; z < 16; i++) {
-			if (z < length)
-				newContent[length - i][z] = name[z];
+	size_t length2;
+	for (mfd_line; mfd_line < length; mfd_line++) {
+		name = mfd_text[length - mfd_line - 1].name.GetBSTR();
+		length2 = mfd_text[length - mfd_line - 1].name.length();
+		for (int z = 0; z < 16; z++) {
+			if (z < length2)
+				newContent[mfd_line][z] = name[z];
 		}
 	}
 
