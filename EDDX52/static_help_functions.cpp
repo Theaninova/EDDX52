@@ -61,9 +61,10 @@ void performMfdTransition(DirectOutput_SetString &setString, std::vector<mfd_ent
 	wchar_t * name;
 	size_t length = mfd_text.size();
 	size_t length2;
-	for (mfd_line; mfd_line < length; mfd_line++) {
-		name = mfd_text[length - mfd_line - 1].name.GetBSTR();
-		length2 = mfd_text[length - mfd_line - 1].name.length();
+	int length3 = mfd_line + 3;
+	for (mfd_line; mfd_line < length && mfd_line < length3; mfd_line++) {
+		name = mfd_text[mfd_line].name.GetBSTR();
+		length2 = mfd_text[mfd_line].name.length();
 		for (int z = 0; z < 16; z++) {
 			if (z < length2)
 				newContent[mfd_line][z] = name[z];
@@ -82,7 +83,7 @@ void performMfdTransition(DirectOutput_SetString &setString, wchar_t (&newConten
 	}
 
 	for (int i = 0; i < 3; i++) {
-		setString(activeDevice, workPage, i, wcslen(newContent[i]), newContent[i]);
+		setString(activeDevice, workPage, i, 16, newContent[i]);
 		std::this_thread::sleep_for(pause);
 	}
 }
