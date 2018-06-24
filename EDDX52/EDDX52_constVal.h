@@ -21,7 +21,7 @@ const static _bstr_t permaSyncToCommand = L"permaSyncTo";
 const static _bstr_t desyncCommand = L"desync";
 const static _bstr_t peakMfdCommand = L"peakMFD";
 const static _bstr_t removeMfdEntry = L"removeMFDEntry";
-const static _bstr_t editMfdEntry = L"editMfdEntry";
+const static _bstr_t editMfdEntry = L"editMFDEntry";
 //Error and return codes
 const static _bstr_t errorTooFewParam = L"!TOO_FEW_PARAM";
 const static _bstr_t errorInvalidAct = L"!INVALID_ACTION ";
