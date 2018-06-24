@@ -1,9 +1,6 @@
 ﻿D:\Visual Studio 2017\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-  stdafx.cpp
   EDDX52.cpp
 d:\projects\eddx52\eddx52\eddx52\eddx52.cpp(435): warning C4018: '>=': signed/unsigned mismatch
 d:\projects\eddx52\eddx52\eddx52\eddx52.cpp(435): warning C4018: '<': signed/unsigned mismatch
-  dllmain.cpp
-  static_help_functions.cpp
-  Generating Code...
+     Creating library C:\Users\wulka\AppData\Local\EDDiscovery\DLL\EDDX52.lib and object C:\Users\wulka\AppData\Local\EDDiscovery\DLL\EDDX52.exp
   EDDX52.vcxproj -> C:\Users\wulka\AppData\Local\EDDiscovery\DLL\EDDX52.dll
