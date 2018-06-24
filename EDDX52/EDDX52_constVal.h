@@ -69,7 +69,7 @@ const static LedState simpleLedStates[simpleLedStatesCount]{
 struct mfd_entry {
 	_bstr_t name;
 	_bstr_t callbackName;
-	int id;
+	_bstr_t id;
 };
 //Flash Patterns
 struct timestamp {
