@@ -21,12 +21,13 @@ const static _bstr_t permaSyncToCommand = L"permaSyncTo";
 const static _bstr_t desyncCommand = L"desync";
 const static _bstr_t peakMfdCommand = L"peakMFD";
 const static _bstr_t removeMfdEntry = L"removeMFDEntry";
+const static _bstr_t editMfdEntry = L"editMfdEntry";
 //Error and return codes
 const static _bstr_t errorTooFewParam = L"!TOO_FEW_PARAM";
 const static _bstr_t errorInvalidAct = L"!INVALID_ACTION ";
 const static _bstr_t errorLedNotFound = L"!LED_NOT_FOUND";
 const static _bstr_t errorStateNotFound = L"!LED_STATE_NOT_FOUND";
-const static _bstr_t errorElementNotFound = L"!ELEMENT_NOT_FOUND";
+const static _bstr_t errorElementNotFound = L"!ENTRY_NOT_FOUND";
 const static _bstr_t success = L"SUCCESS";
 
 //Stuff for Simplified LED control
@@ -68,6 +69,7 @@ const static LedState simpleLedStates[simpleLedStatesCount]{
 struct mfd_entry {
 	_bstr_t name;
 	_bstr_t callbackName;
+	int id;
 };
 //Flash Patterns
 struct timestamp {
