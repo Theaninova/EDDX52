@@ -403,7 +403,7 @@ EDD_API BSTR __cdecl EDDActionCommand(BSTR action, SAFEARRAY& args) {
 		setLed(activeDevice, workPage, led->redCompName, state->stateRed);
 		setLed(activeDevice, workPage, led->greenCompName, state->stateGreen);
 
-		return success;
+		return ::SysAllocString(success);
 	}
 	else if (0 == wcscmp(action, setStringCommand)) {
 		const wchar_t * line;
@@ -456,7 +456,7 @@ EDD_API BSTR __cdecl EDDActionCommand(BSTR action, SAFEARRAY& args) {
 		const wchar_t * line;
 		long index1 = 0;
 		if (::SafeArrayGetElement(&args, &index1, &line) != S_OK)
-			return errorTooFewParam;
+			return ::SysAllocString(errorTooFewParam);
 		int dwLine = _wtol(line);
 		scrollMfd(dwLine);
 		return ::SysAllocString(success);
