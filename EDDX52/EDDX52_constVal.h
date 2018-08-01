@@ -28,7 +28,7 @@ const static _bstr_t errorInvalidAct = L"!INVALID_ACTION ";
 const static _bstr_t errorLedNotFound = L"!LED_NOT_FOUND";
 const static _bstr_t errorStateNotFound = L"!LED_STATE_NOT_FOUND";
 const static _bstr_t errorElementNotFound = L"!ENTRY_NOT_FOUND";
-const static _bstr_t success = L"SUCCESS";
+const static _bstr_t success = L"+SUCCESS";
 
 //Stuff for Simplified LED control
 const static int ledCount = 20;
