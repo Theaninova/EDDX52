@@ -440,7 +440,7 @@ EDD_API BSTR __cdecl EDDActionCommand(BSTR action, SAFEARRAY& args) {
 		return ::SysAllocString(success);
 	}
 	else if (0 == wcscmp(action, getLinesCountCommand)) {
-		return ::SysAllocString(_bstr_t(mfd_text.size()));
+		return ::SysAllocString("+" + _bstr_t(mfd_text.size()));
 	}
 	else if (0 == wcscmp(action, resetMFDCommand)) {
 		mfd_line = 0;
