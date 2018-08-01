@@ -1,11 +1,14 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(377,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
+  stdafx.cpp
   EDDX52.cpp
 d:\projects\eddx52\eddx52\eddx52\eddx52.cpp(435): warning C4018: '>=': signed/unsigned mismatch
 d:\projects\eddx52\eddx52\eddx52\eddx52.cpp(435): warning C4018: '<': signed/unsigned mismatch
+  dllmain.cpp
+  static_help_functions.cpp
      Creating library C:\Users\wulkanat\OneDrive\EDDX52\EDDX52.lib and object C:\Users\wulkanat\OneDrive\EDDX52\EDDX52.exp
   Generating code
-  7 of 609 functions ( 1.1%) were compiled, the rest were copied from previous compilation.
-    6 functions were new in current compilation
+  115 of 609 functions (18.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   EDDX52.vcxproj -> C:\Users\wulkanat\OneDrive\EDDX52\EDDX52.dll
