@@ -3,8 +3,8 @@
 
 const static long stdTransitionDuration = 600;
 //Version stuff
-const static std::string version = "1.0";
-const static wchar_t * bsVersion = L"1.0";
+const static std::string version = "v1.1-alpha";
+const static wchar_t * bsVersion = L"v1.1-alpha";
 const static _bstr_t name = L"EDDX52";
 //Command names
 const static _bstr_t setLEDCommand = L"setLED";
