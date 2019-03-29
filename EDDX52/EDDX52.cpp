@@ -420,7 +420,7 @@ EDD_API BSTR __cdecl EDDActionCommand(BSTR action, SAFEARRAY& args) {
 			return ::SysAllocString(errorTooFewParam);
 		}
 
-		if (::SafeArrayGetElement(&args, &index3, &callback) != S_OK) {
+		if (::SafeArrayGetElement(&args, &index4, &callback) != S_OK) {
 			callback = L"";
 		}
 
