@@ -1,6 +1,8 @@
 # EDDX52
 Direct Output Extension for EDDiscovery
 
+For a quick introduction, please refer to the wiki secion.
+
 IF you are interested in video updates, also consider subscribing to my YouTube channel. A playlist of video demos of the plugin can be found here:
 https://www.youtube.com/watch?v=X7Aa_dmgoHg&list=PLx_w0I1Dt0F18xxf1sGLsxxo1jC_-v9dm
 
